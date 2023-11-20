@@ -43,10 +43,18 @@ public class QueueManager {
                     matched.add(requester);
                     peopleToMatch.remove(requester);
                     peopleToMatch.remove(offerer);
+
+                    // Simulates sending text message to the matched users
+                    System.out.println("Sending text message to matched users... Done.");
+
                     break;
                 }
             }
-        }
+        
+
+        registeredUsers.removeAll(matched);
+        waitingList = new LinkedList<>(registeredUsers);
+    }
 
         registeredUsers.removeAll(matched);
         waitingList = new LinkedList<>(registeredUsers);

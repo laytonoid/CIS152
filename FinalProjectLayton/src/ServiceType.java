@@ -22,9 +22,16 @@ public class ServiceType {
     }
 
     /**
-     * Retrieves the service type associated with index num
+     * Retrieves service type associated with index
      */
     public static String fromInt(int index) {
         return serviceTypes.getOrDefault(index, "Unknown");
+    }
+
+    /**
+     * Retrieves the entire map of service types.
+     */
+    public static Map<Integer, String> getServiceTypes() {
+        return new HashMap<>(serviceTypes);
     }
 }
