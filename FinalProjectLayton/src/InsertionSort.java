@@ -17,7 +17,7 @@ public class InsertionSort {
     }
 
     /**
-     * Prints list of people
+     * Prints list of people 
      */
     public static void printPeople(List<Person> people) {
         for (Person person : people) {
