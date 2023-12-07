@@ -14,13 +14,17 @@ public class ServiceExchangeApp {
     private static QueueManager queueManager = new QueueManager();
 
     public static void main(String[] args) {
-        // Creates window
+        /**
+         *  Creates window
+         */
         JFrame frame = new JFrame("Services Exchange App");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(320, 400);
         frame.setLayout(new BorderLayout());
 
-        // Logo Panel
+        /**
+         *  Logo Panel
+         */
         JPanel logoPanel = new JPanel() {
         @Override
         protected void paintComponent(Graphics g) {
@@ -32,7 +36,9 @@ public class ServiceExchangeApp {
         };
         logoPanel.setPreferredSize(new Dimension(600, 60));
 
-        // Main Panel for user interaction
+        /**
+         *  Main Panel for user interaction
+         */
         JPanel mainPanel = new JPanel();
         mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.Y_AXIS));
 
@@ -56,11 +62,15 @@ public class ServiceExchangeApp {
         mainPanel.add(wantedBox);
         mainPanel.add(registerButton);
 
-        // Adds the logo and main panel to frame
+        /**
+         *  Adds logo and main panel to frame
+         */
         frame.add(logoPanel, BorderLayout.NORTH);
         frame.add(mainPanel, BorderLayout.CENTER);
 
-        // Register button
+        /**
+         *  Register button
+         */
         registerButton.addActionListener(new ActionListener() {
         	@Override
         	public void actionPerformed(ActionEvent e) {
@@ -86,15 +96,21 @@ public class ServiceExchangeApp {
 
         frame.setVisible(true);
     }
-    //checks if phone number has 10 digits
+    /**
+     * checks if phone number has 10 digits
+     */
     private static boolean validPhone(String phoneNumber) {
         return phoneNumber.length() == 10 && phoneNumber.chars().allMatch(Character::isDigit);
     }
-    //checks for valid name (no digits)
+    /**
+     * checks for valid name (no digits)
+     */
     private static boolean validName(String name) {
         return name.matches("[a-zA-Z\\s]+");
     }
-    //allows "none" service option only for wanted services drop down
+    /**
+     * allows "none" service option only for wanted services drop down
+     */
     private static String[] getChoice(boolean none) {
         List<String> options = new ArrayList<>();
         if (none) {

@@ -3,7 +3,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 /**
- * QueueManager class manages the wait queue of people for S.E.A.
+ * QueueManager class manages wait queue of people for S.E.A.
  */
 public class QueueManager {
     private Queue<Person> waitingList;
@@ -26,8 +26,9 @@ public class QueueManager {
         }
     }
     /**
-     * Matches registered users in list based on the skills they offer/want
+     * Matches register users in list based on the skills they offer/want
      * Sorts the list of registered users and then attempts to find pairs.
+     * Outputs a simulated message to users upon matching.
      */
     private void matchUsers() {
         InsertionSort.sortPeople(registeredUsers);
@@ -49,7 +50,6 @@ public class QueueManager {
                     peopleToMatch.remove(requester);
                     peopleToMatch.remove(offerer);
 
-                    // Simulates sending text message to the matched users
                     System.out.println("Sending text message to matched users... Done.");
                     break;
                 }

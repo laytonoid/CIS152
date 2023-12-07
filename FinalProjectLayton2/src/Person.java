@@ -16,8 +16,9 @@ public class Person {
         this.skillWanted = skillWanted;
         this.submissionTime = LocalDateTime.now();
     }
-
-    // Getters and Setters
+/**
+ * Getters and Setters
+ */
     public String getName() { return name; }
     public String getPhoneNumber() { return phoneNumber; }
     

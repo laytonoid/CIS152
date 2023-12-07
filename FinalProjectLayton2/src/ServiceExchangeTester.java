@@ -5,7 +5,9 @@ public class ServiceExchangeTester {
     public static void main(String[] args) {
         QueueManager queueManager = new QueueManager();
 
-        // Creates instances of Person with int ServiceType values
+        /**
+         *  Creates instances of Person with int ServiceType values
+         */
         Person Han = new Person("Han", "123-456-7890", 8, 6); // Cooking, DIY
         Person Leia = new Person("Leia", "987-654-3210", 12, 5); // Childcare, art/Creativity
         Person Luke = new Person("Luke", "555-555-5555", 1, 11); // Education, Personal Care
@@ -15,7 +17,9 @@ public class ServiceExchangeTester {
         Person Artoo = new Person("Artoo", "336-455-4424", 6, 8); // DIY, Cooking
         Person Kenobi = new Person("Kenobi", "665-463-5654", 9, 5); // Financial, Art/Creativity
 
-        // Adds people to the queue and tries to match them
+        /**
+         *  Adds people to the queue and tries to match them
+         */
         addPersonToQueue(queueManager, Han);
         addPersonToQueue(queueManager, Leia);
         addPersonToQueue(queueManager, Luke);
